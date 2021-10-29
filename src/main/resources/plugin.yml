@@ -1,0 +1,9 @@
+name: TabSortingTest
+version: '${project.version}'
+main: tev.tabsortingtest.Main
+api-version: 1.16
+authors: [ Tevuori ]
+
+commands:
+  mdit:
+    description: Will make you look like default in tab
