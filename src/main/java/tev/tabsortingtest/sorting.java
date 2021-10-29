@@ -45,8 +45,8 @@ public class sorting {
             System.out.println("-----------------");
             List<TabPlayer> sortedplayersinlist = new ArrayList();
         for (Player po: sortedplayers.keySet()) {
-            TabPlayer poo = TAB.getInstance().getPlayer(po.getUniqueId());
-            sortedplayersinlist.add(poo);
+            //TabPlayer poo = TAB.getInstance().getPlayer(po.getUniqueId());
+            //sortedplayersinlist.add(poo);
         }
             System.out.println(sortedplayersinlist);
             System.out.println("-----------------");
