@@ -12,7 +12,7 @@ public class sorting {
     public static void sorting(){
         HashMap<Player, Integer> allplayers = new HashMap<>();
         for (Player p: Bukkit.getOnlinePlayers()){
-            if(Main.getPlugin(Main.class).nickedplayers.contains(p)){
+            if(Main.getPlugin(Main.class).nickedplayers.contains(p.getName())){
                 allplayers.put(p, 10);
             }else if(p.hasPermission("weight.100")){
                 allplayers.put(p, 100);
@@ -45,13 +45,13 @@ public class sorting {
             System.out.println("-----------------");
             List<TabPlayer> sortedplayersinlist = new ArrayList();
         for (Player po: sortedplayers.keySet()) {
-            //TabPlayer poo = TAB.getInstance().getPlayer(po.getUniqueId());
-            //sortedplayersinlist.add(poo);
+            TabPlayer poo = TAB.getInstance().getPlayer(po.getUniqueId());
+            sortedplayersinlist.add(poo);
         }
             System.out.println(sortedplayersinlist);
             System.out.println("-----------------");
-            //sortedplayersinlist.forEach((pp) -> TAB.getInstance().removePlayer(pp));
-            //sortedplayersinlist.forEach((pl) -> TAB.getInstance().addPlayer(pl));
+            sortedplayersinlist.forEach((pp) -> TAB.getInstance().removePlayer(pp));
+            sortedplayersinlist.forEach((pl) -> TAB.getInstance().addPlayer(pl));
 
         }
     public static HashMap<Player, Integer> sortByValue(HashMap<Player, Integer> hm)

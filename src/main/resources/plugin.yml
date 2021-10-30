@@ -3,7 +3,11 @@ version: '${project.version}'
 main: tev.tabsortingtest.Main
 api-version: 1.16
 authors: [ Tevuori ]
+depend:
+  - TAB
 
 commands:
   mdit:
     description: Will make you look like default in tab
+  rdit:
+    description: This will reset your position in TAB.
